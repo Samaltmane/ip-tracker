@@ -16,22 +16,3 @@ fetch("https://ipapi.co/json/")
     document.getElementById("ip-info").innerHTML = "<p>Error loading IP info.</p>";
     console.error("IP fetch error:", error);
   });
-
-// ✅ Dark mode toggle logic
-const themeToggle = document.getElementById("toggle-theme");
-
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-
-  // Save theme preference
-  const isDark = document.body.classList.contains("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-});
-
-// ✅ Load saved theme on page load
-window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark");
-  }
-});
