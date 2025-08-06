@@ -16,7 +16,7 @@ body {
   background: #fff;
   width: 90%;
   max-width: 420px;
-  padding: 30px 25px;
+  padding: 35px 25px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -25,15 +25,49 @@ body {
 
 /* Interactive hover effect */
 .container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Header */
 h1 {
   color: #222;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 24px;
+}
+
+/* Input field */
+input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.4);
+}
+
+/* Button */
+button.lookup-btn {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+button.lookup-btn:hover {
+  background-color: #1a5fd0;
 }
 
 /* Info display card */
@@ -43,35 +77,19 @@ h1 {
   border-radius: 10px;
   padding: 20px;
   text-align: left;
+  margin-top: 20px;
 }
 
 #ip-info p {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* Footer for branding */
 footer {
   margin-top: 25px;
-  font-size: 14px;
+  font-size: 13px;
   color: #777;
-}
-
-/* Toggle Button (now just a styled button, no toggle) */
-.theme-btn {
-  background-color: #2575fc;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  font-size: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.theme-btn:hover {
-  background-color: #1a5fd0;
 }
 
 /* Responsive text sizing */
@@ -85,6 +103,11 @@ footer {
   }
 
   #ip-info p {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  button.lookup-btn {
+    font-size: 13px;
   }
 }
